@@ -30,7 +30,7 @@ public abstract class Reading implements Comparable<Reading> {
 
 	@Override
 	public String toString() {
-		return "Reading [id=" + id + ", title=" + title + ", author=" + author + ", cost=" + cost + "]";
+		return "id=" + id + ", title=" + title + ", author=" + author + ", cost=" + cost + "]";
 	}
 
 	/**

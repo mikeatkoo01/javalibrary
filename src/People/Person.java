@@ -2,14 +2,19 @@ package People;
 
 public class Person {
 
+	private int id;
+
 	private String name;
 
 	private int age;
 
 	private boolean member;
 
+	private static int count;
+
 	public Person(String name, int age, boolean member) {
 		super();
+		this.id = ++count;
 		this.name = name;
 		this.age = age;
 		this.member = member;
@@ -17,7 +22,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", member=" + member + "]";
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", member=" + member + "]";
 	}
 
 	/**
