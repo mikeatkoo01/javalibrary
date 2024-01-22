@@ -13,21 +13,21 @@ public class Library {
 
 	private ArrayList<Reading> reading = new ArrayList<>();
 
-	public void checkIn(Reading read) {
+	public void addInv(Reading read) {
 		reading.add(read);
 	}
 
-	public void checkOut(Reading read) {
+	public void deleteInv(Reading read) {
 		reading.remove(read);
 	}
 
-	public void update(Reading read) {
+	public void updateInv(Reading read) {
 		reading.set(0, read);
 	}
 
 	@Override
 	public String toString() {
-		return "Library [reading=" + reading + "]";
+		return "Library [name=" + name + "reading=" + reading + "]";
 	}
 
 	/**
@@ -42,6 +42,28 @@ public class Library {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	/**
+	 * @return the reading
+	 */
+	public ArrayList<Reading> getReading() {
+		return reading;
+	}
+
+	/**
+	 * @param reading the reading to set
+	 */
+	public void setReading(ArrayList<Reading> reading) {
+		this.reading = reading;
+	}
+
+	public void checkIn(Reading read) {
+		reading.add(read);
+	}
+
+	public void checkOut(Reading read) {
+		reading.remove(read);
 	}
 
 }

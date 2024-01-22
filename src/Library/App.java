@@ -16,6 +16,10 @@ public class App {
 		myLibrary.checkIn(Pac);
 		myLibrary.checkOut(lionking);
 
+		myLibrary.addInv(new Books());
+		myLibrary.addInv(new Books());
+		myLibrary.addInv(new Books());
+
 		System.out.println(myLibrary);
 
 	}
