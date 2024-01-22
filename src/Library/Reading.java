@@ -1,6 +1,6 @@
 package Library;
 
-public class Reading {
+public abstract class Reading implements Comparable<Reading> {
 
 	private int id;
 
@@ -25,6 +25,8 @@ public class Reading {
 		this.id = ++count;
 
 	}
+
+	public abstract int totalCost();
 
 	@Override
 	public String toString() {

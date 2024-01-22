@@ -25,13 +25,24 @@ public class Books extends Reading {
 
 	@Override
 	public String toString() {
-		return "Books [sequel=" + sequel + ", getId()=" + getId() + ", getTitle()=" + getTitle() + ", getAuthor()="
-				+ getAuthor() + ", getCost()=" + getCost() + "]";
+		return "Books [sequel=" + sequel + ", ID =" + getId() + ", Title =" + getTitle() + ", Author =" + getAuthor()
+				+ ", Cost =" + getCost() + "]";
 	}
 
 	public Books(String title, String author, int cost, boolean sequel) {
 		super(title, author, cost);
 		this.sequel = sequel;
+	}
+
+	@Override
+	public int totalCost() {
+		return 10;
+	}
+
+	@Override
+	public int compareTo(Reading o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	// TODO Auto-generated constructor stub

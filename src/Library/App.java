@@ -10,7 +10,13 @@ public class App {
 
 		Biography Pac = new Biography("2pac", "makavelli", 10, false);
 
-		System.out.println(Pac);
+		Library myLibrary = new Library("Leeds Library");
+
+		myLibrary.checkIn(lionking);
+		myLibrary.checkIn(Pac);
+		myLibrary.checkOut(lionking);
+
+		System.out.println(myLibrary);
 
 	}
 

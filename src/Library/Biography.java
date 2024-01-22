@@ -1,6 +1,8 @@
 package Library;
 
-public class Biography extends Reading {
+import Interface.Nonfiction;
+
+public class Biography extends Reading implements Nonfiction {
 
 	private boolean hardback;
 
@@ -24,8 +26,27 @@ public class Biography extends Reading {
 
 	@Override
 	public String toString() {
-		return "Biography [hardback=" + hardback + ", getId()=" + getId() + ", getTitle()=" + getTitle()
-				+ ", getAuthor()=" + getAuthor() + ", getCost()=" + getCost() + "]";
+		return "Biography hardback =" + hardback + ", Id =" + getId() + ", Title =" + getTitle() + ", Author ="
+				+ getAuthor() + ", Cost =" + getCost() + "]";
+	}
+
+	@Override
+	public int compareTo(Reading o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int totalCost() {
+		// TODO Auto-generated method stub
+		return 10;
+	}
+
+	@Override
+	public void Nonfiction() {
+		System.out.println("type NF");
+		// TODO Auto-generated method stub
+
 	}
 
 	// TODO Auto-generated constructor stub

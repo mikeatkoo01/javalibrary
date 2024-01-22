@@ -30,8 +30,20 @@ public class Maps extends Reading {
 
 	@Override
 	public String toString() {
-		return "Maps [uptodate=" + uptodate + ", getId()=" + getId() + ", getTitle()=" + getTitle() + ", getAuthor()="
-				+ getAuthor() + ", getCost()=" + getCost() + "]";
+		return "Maps [uptodate=" + uptodate + ", ID =" + getId() + ", Title =" + getTitle() + ", Author =" + getAuthor()
+				+ ", Cost =" + getCost() + "]";
+	}
+
+	@Override
+	public int compareTo(Reading o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int totalCost() {
+		// TODO Auto-generated method stub
+		return 10;
 	}
 
 }

@@ -1,6 +1,8 @@
 package Library;
 
-public class Newspapers extends Reading {
+import Interface.Nonfiction;
+
+public class Newspapers extends Reading implements Nonfiction {
 
 	private boolean todays;
 
@@ -30,8 +32,27 @@ public class Newspapers extends Reading {
 
 	@Override
 	public String toString() {
-		return "Newspapers [todays=" + todays + ", getId()=" + getId() + ", getTitle()=" + getTitle() + ", getAuthor()="
-				+ getAuthor() + ", getCost()=" + getCost() + "]";
+		return "Newspapers [todays=" + todays + ", Id =" + getId() + ", Title =" + getTitle() + ", Author ="
+				+ getAuthor() + ", Cost =" + getCost() + "]";
+	}
+
+	@Override
+	public int totalCost() {
+		return 10;
+	}
+
+	@Override
+	public int compareTo(Reading o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void Nonfiction() {
+		System.out.println("type NF");
+
+		// TODO Auto-generated method stub
+
 	}
 
 }
