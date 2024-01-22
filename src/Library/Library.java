@@ -25,6 +25,13 @@ public class Library {
 		reading.set(0, read);
 	}
 
+//	public void displayInv() {
+//		System.out.println("All Available Rentals");
+//		for (Reading read : reading){
+//			if (reading.isAvailable()) {
+//				}
+//			}
+
 	@Override
 	public String toString() {
 		return "Library [name=" + name + "reading=" + reading + "]";

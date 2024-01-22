@@ -1,6 +1,8 @@
-package People;
+package Library;
 
 import java.util.ArrayList;
+
+import People.Person;
 
 public class Members {
 

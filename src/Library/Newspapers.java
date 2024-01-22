@@ -25,15 +25,16 @@ public class Newspapers extends Reading implements Nonfiction {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Newspapers(String title, String author, int cost, boolean todays) {
-		super(title, author, cost);
+	public Newspapers(String title, String author, int cost, boolean available, boolean todays) {
+		super(title, author, cost, available);
 		this.todays = todays;
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "Newspapers [todays=" + todays + ", Id =" + getId() + ", Title =" + getTitle() + ", Author ="
-				+ getAuthor() + ", Cost =" + getCost() + "]";
+		return "Newspapers [Id =" + getId() + ", Title =" + getTitle() + ", Author =" + getAuthor() + ", Cost ="
+				+ getCost() + ", Available to read =" + isAvailable() + ", todays=" + todays + "]";
 	}
 
 	@Override

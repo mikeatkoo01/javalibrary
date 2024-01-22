@@ -19,15 +19,16 @@ public class Biography extends Reading implements Nonfiction {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Biography(String title, String author, int cost, boolean hardback) {
-		super(title, author, cost);
+	public Biography(String title, String author, int cost, boolean available, boolean hardback) {
+		super(title, author, cost, available);
 		this.hardback = hardback;
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "Biography hardback =" + hardback + ", Id =" + getId() + ", Title =" + getTitle() + ", Author ="
-				+ getAuthor() + ", Cost =" + getCost() + "]";
+		return "Biography [Id =" + getId() + ", Title =" + getTitle() + ", Author =" + getAuthor() + ", Cost ="
+				+ getCost() + ", Available to rent =" + isAvailable() + ", hardback=" + hardback + "]";
 	}
 
 	@Override

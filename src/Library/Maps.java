@@ -16,9 +16,10 @@ public class Maps extends Reading {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Maps(String title, String author, int cost, boolean uptodate) {
-		super(title, author, cost);
+	public Maps(String title, String author, int cost, boolean available, boolean uptodate) {
+		super(title, author, cost, available);
 		this.uptodate = uptodate;
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -30,8 +31,8 @@ public class Maps extends Reading {
 
 	@Override
 	public String toString() {
-		return "Maps [uptodate=" + uptodate + ", ID =" + getId() + ", Title =" + getTitle() + ", Author =" + getAuthor()
-				+ ", Cost =" + getCost() + "]";
+		return "Maps [Id =" + getId() + ", Title =" + getTitle() + ", Author =" + getAuthor() + ", Cost=" + getCost()
+				+ ", Available to rent=" + isAvailable() + ", uptodate=" + uptodate + "]";
 	}
 
 	@Override

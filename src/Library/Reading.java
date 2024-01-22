@@ -10,14 +10,17 @@ public abstract class Reading implements Comparable<Reading> {
 
 	private int cost;
 
+	private boolean available;
+
 	private static int count;
 
-	public Reading(String title, String author, int cost) {
+	public Reading(String title, String author, int cost, boolean available) {
 		super();
 		this.id = ++count;
 		this.title = title;
 		this.author = author;
 		this.cost = cost;
+		this.available = true;
 	}
 
 	public Reading() {
@@ -30,7 +33,8 @@ public abstract class Reading implements Comparable<Reading> {
 
 	@Override
 	public String toString() {
-		return "id=" + id + ", title=" + title + ", author=" + author + ", cost=" + cost + "]";
+		return "id=" + id + ", title=" + title + ", author=" + author + ", cost=" + cost + ", available" + available
+				+ "]";
 	}
 
 	/**
@@ -82,6 +86,27 @@ public abstract class Reading implements Comparable<Reading> {
 		return cost;
 	}
 
+	public void rent() {
+		if (available) {
+			available = false;
+			System.out.println("can be rented" + title);
+		} else {
+			System.out.println("sorry item is not available");
+		}
+
+	}
+
+	public void returnitem() {
+		available = true;
+		System.out.println("item returned");
+	}
+
+	@Override
+	public int compareTo(Reading o) {
+		// TODO Auto-generated method stub
+		return this.title.compareTo(title);
+	}
+
 	/**
 	 * @param cost the cost to set
 	 */
@@ -101,6 +126,14 @@ public abstract class Reading implements Comparable<Reading> {
 	 */
 	public static void setCount(int count) {
 		Reading.count = count;
+	}
+
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
 	}
 
 }
